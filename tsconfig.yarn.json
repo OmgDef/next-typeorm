@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "skipLibCheck": false,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true,
+    "require": [
+      "tsconfig-paths/register",
+      "dotenv/config",
+    ]
+  }
+}
